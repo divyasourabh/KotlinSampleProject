@@ -16,32 +16,6 @@ fun main(args: Array<String>) {
     println("Typealias")
     val employee: EmployeeSet// Now empleyee variable is of type Set<Employee>
 
-    println("VAR vs VAL")
-    var number1: Int
-    number1 = 10
-    number1 = 30 // it will work as Var is mutable variable
-
-    println("Data Type sample")
-    val number2: Int
-    number2 = 10
-//    number2 = 20 //Wont work VAL if final
-
-    var myShort: Short =1221
-    var myByte: Byte = 111
-    /*Converting*/
-    myShort = myByte.toShort()
-
-    var myLOng = 22L
-    var myInt = 10
-
-    /*CAST INT INTO LONG*/
-    myLOng = myInt.toLong()
-
-    val myFloat: Float = 2345.234F
-    println("This is a float: ${myFloat is Float}")
-
-
-
     /*No NEW keyword in Kotlin*/
     val employee1 = Employee("Divya1", 100)
     val employee2 = Employee("Divya2", 200)

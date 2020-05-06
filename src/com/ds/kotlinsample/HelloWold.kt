@@ -29,6 +29,7 @@ fun main(args: Array<String>) {
     println(employee1.id)
 
     println("Check Equality")
+    /********  ==  is Null safe ********/
     println(employee2 == employee4)
     println(employee2 != employee4)
 
@@ -47,7 +48,7 @@ fun main(args: Array<String>) {
     * Bit wise operator in kotlin use by word not by symbol
     * OR
     * AND
-    * XOP
+    * XOPletlet
     * */
 
     /*

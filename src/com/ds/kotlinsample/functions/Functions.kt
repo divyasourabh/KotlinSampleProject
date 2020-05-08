@@ -18,6 +18,24 @@ fun main(args: Array<String>) {
     //You only have one type of vararg parameter and should be in Start
     println(Employee(op2 = 10,op1 = 20).multiplyAnyNumber( 2,2,2,2,label = "Result of vararg = "))
 
+
+    val employee2 = Employee("Two")
+    val employee3 = Employee("Three")
+    val employee4 = Employee("Four")
+    val employee5 = Employee("Five")
+
+    val manyEmployee = arrayOf(employee2,employee3,employee4,employee5)
+
+
+    /// '*' operator is known as the Spread Operator : Unnpacking the element from the Array
+    printEmployee(*manyEmployee)
+
+    //Spread operator can be used for unpacking multiple list in array of lists
+
+    printText(employee2.firstName,employee3.firstName,employee4.firstName,employee5.firstName)
+
+
+
 }
 
 fun labelMultiply(operand1:Int,operand2: Int,lable:String) : String /*Return Type*/ {
@@ -33,6 +51,18 @@ fun labelMultiplySimplification1(operand1:Int,operand2: Int,lable:String) : Stri
 
 //here Kotlin Complier intelligent enough to infer that return type is String so we can remove
 fun labelMultiplySimplification2(operand1:Int,operand2: Int,lable:String) = ("$lable ${operand1*operand2}") // Expression body
+
+fun printText(vararg text :String) {
+    for (str in text){
+        print(str)
+    }
+}
+
+fun printEmployee(vararg employee :Employee) {
+    for (employe in employee){
+        println(employe.firstName)
+    }
+}
 
 
 class Employee (var firstName:String) { //Primar Constructor
@@ -64,6 +94,7 @@ class Employee (var firstName:String) { //Primar Constructor
         }
         return "$label ${result}"
     }
+
     fun printUpperCase() = firstName.toUpperCase()
 
 

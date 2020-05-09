@@ -99,3 +99,7 @@ class Employee (var firstName:String) { //Primar Constructor
 
 
 }
+
+fun sampleNonInternalFunction() = "I am non Internal Function"
+
+internal fun sampleInternalFunction() = "I am Internal Function"

@@ -32,6 +32,7 @@ fun main(args: Array<String>) {
 
     /********Elvis Operator ?: ************/
     //This is to assign Default value
+    //If value is null then assign default value
 
     var str =null
     var str2 = str ?: "This is the default value"
